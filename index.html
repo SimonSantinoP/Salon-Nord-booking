@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salon Nord — Frisør i Aalborg</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..900;1,300..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <span class="logo">Salon Nord</span>
+    <nav>
+      <a href="#ydelser">Ydelser</a>
+      <a href="#book">Book tid</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Frisør &middot; Aalborg</p>
+    <h1>Klip der sidder,<br>hver gang.</h1>
+    <p class="hero-sub">Book din tid online på under ét minut — ingen ventetid i telefonen.</p>
+    <a href="#book" class="btn btn-primary">Book tid nu</a>
+  </div>
+</section>
+
+<section id="ydelser" class="services">
+  <div class="wrap">
+    <h2>Ydelser</h2>
+    <ul class="service-list">
+      <li>
+        <span class="service-name">Herreklip</span>
+        <span class="service-line"></span>
+        <span class="service-price">350 kr</span>
+      </li>
+      <li>
+        <span class="service-name">Dameklip</span>
+        <span class="service-line"></span>
+        <span class="service-price">450 kr</span>
+      </li>
+      <li>
+        <span class="service-name">Farvning</span>
+        <span class="service-line"></span>
+        <span class="service-price">750 kr</span>
+      </li>
+      <li>
+        <span class="service-name">Klip &amp; skæg</span>
+        <span class="service-line"></span>
+        <span class="service-price">450 kr</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="book" class="booking">
+  <div class="wrap booking-inner">
+    <div class="booking-intro">
+      <h2>Book din tid</h2>
+      <p>Udfyld formularen, så bekræfter vi tiden hurtigst muligt. Du kan betale online med det samme, eller ved fremmøde.</p>
+    </div>
+
+    <form id="booking-form" class="booking-form" action="https://formspree.io/f/DIT_FORMSPREE_ID" method="POST">
+      <div class="field">
+        <label for="name">Navn</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="phone">Telefon</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="field">
+        <label for="service">Ydelse</label>
+        <select id="service" name="service" required>
+          <option value="">Vælg ydelse</option>
+          <option value="Herreklip — 350 kr">Herreklip — 350 kr</option>
+          <option value="Dameklip — 450 kr">Dameklip — 450 kr</option>
+          <option value="Farvning — 750 kr">Farvning — 750 kr</option>
+          <option value="Klip & skæg — 450 kr">Klip &amp; skæg — 450 kr</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="date">Ønsket dato</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="field field-wide">
+        <label for="note">Besked (valgfri)</label>
+        <textarea id="note" name="note" rows="3"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Book tid</button>
+        <a id="pay-link" class="btn btn-outline" href="https://buy.stripe.com/DIT_PAYMENT_LINK" target="_blank" rel="noopener">Betal online</a>
+      </div>
+      <p id="form-status" class="form-status" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<footer id="kontakt" class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <span class="logo">Salon Nord</span>
+      <p>Algade 12, 9000 Aalborg</p>
+    </div>
+    <div>
+      <p>Tlf: 12 34 56 78</p>
+      <p>Mail: info@salonnord.dk</p>
+    </div>
+    <div>
+      <p>Man–fre: 9–18</p>
+      <p>Lør: 9–14</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
